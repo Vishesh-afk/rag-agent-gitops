@@ -13,7 +13,7 @@ Jenkins publishes backend and frontend images to Docker Hub, then updates the im
 
 1. Minikube with Argo CD and External Secrets Operator (ESO) installed.
 2. AWS Secrets Manager secret `rag-agent/minikube/runtime` with JSON fields `DB_USER`, `DB_PASSWORD`, `OPENAI_API_KEY`, `LLM_CHOICE`, and `EMBEDDING_MODEL`.
-3. AWS region set in `apps/rag-agent/overlays/minikube/secret-store.yaml`.
+3. The secret should be in AWS region `us-east-2`, matching the project's last known region; verify before syncing.
 4. ESO bootstrap Secret `aws-secrets-manager-auth` created in namespace `rag-agent`, using a dedicated AWS identity that can read only the named secret.
 5. Docker Hub pull Secret `dockerhub-auth` in namespace `rag-agent` because the backend image is private.
 
