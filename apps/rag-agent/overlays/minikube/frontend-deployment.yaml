@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: vishesh11/ragagent-frontend:latest
+          image: vishesh11/ragagent-frontend:9497176dfeae70727cc9de49a89c42bcc92049f1
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

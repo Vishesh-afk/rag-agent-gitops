@@ -17,7 +17,7 @@ spec:
         - name: dockerhub-auth
       containers:
         - name: api
-          image: vishesh11/ragagent-backend:latest
+          image: vishesh11/ragagent-backend:9497176dfeae70727cc9de49a89c42bcc92049f1
           imagePullPolicy: IfNotPresent
           command: ["uvicorn", "agent.api:app", "--host", "0.0.0.0", "--port", "8058"]
           ports:
