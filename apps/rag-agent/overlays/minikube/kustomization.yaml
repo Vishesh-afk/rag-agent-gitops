@@ -3,8 +3,6 @@ kind: Kustomization
 namespace: rag-agent
 resources:
   - namespace.yaml
-  - secret-store.yaml
-  - external-secret.yaml
   - postgres.yaml
   - api-deployment.yaml
   - frontend-deployment.yaml
