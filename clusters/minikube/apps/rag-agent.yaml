@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rag-agent-minikube
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Vishesh-afk/rag-agent-gitops.git
+    targetRevision: main
+    path: apps/rag-agent/overlays/minikube
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: rag-agent
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
