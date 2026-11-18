@@ -3,6 +3,10 @@ kind: Kustomization
 namespace: rag-agent
 resources:
   - namespace.yaml
-  - postgres.yaml
+  - postgres-pvc.yaml
+  - postgres-statefulset.yaml
+  - postgres-service.yaml
   - api-deployment.yaml
+  - api-service.yaml
   - frontend-deployment.yaml
+  - frontend-service.yaml
